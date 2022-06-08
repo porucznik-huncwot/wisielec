@@ -56,6 +56,7 @@ body {
     align-items: center;
     justify-content: space-evenly;
     background-color: #cde6fa;
+    background-color: #474f54;
 }
 
 header {
@@ -65,6 +66,7 @@ header {
     align-items: center;
     justify-content: center;
     color: rgb(71, 79, 84);
+    color: white;
     font-family: "LuckiestGuy";
     font-size: 3em;
     letter-spacing: 3px;
@@ -101,11 +103,13 @@ header {
     justify-content: space-evenly;
     border: 6px solid #474f54;
     border-top: none;
-    border-radius: 10px;
+    border-radius: 20px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    color: #474f54;
-    letter-spacing: 0.7em;
+    /* color: #474f54; */
+    color: white;
+    background-color: #474f54;
+    letter-spacing: 1em;
     text-align: center;
     box-shadow: 11px 10px 25px -27px rgba(66, 68, 90, 1);
     font-family: 'LuckiestGuy';
@@ -285,7 +289,41 @@ header {
     }
 }
 
+#defeat-title{
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    font-family: 'LettersForLearners';
+    /* font-family: 'Subscribe'; */
+    /* font-family: 'EuclidCircular'; */
+    color: whitesmoke;
+    transition: 0.5s ease;
+    animation: start-button-animation 0.5s ease forwards 3.7s;
+    display: none;
+    opacity: 0;
+}
+
+#defeat-title b{
+    font-family: 'LettersForLearners';
+    /* font-family: 'Subscribe'; */
+    /* font-family: 'EuclidCircular'; */
+    color: whitesmoke;
+    margin-left: 10px;
+}
+
+#win-title{
+    align-items: center;
+    font-size: 3em;
+    font-family: 'ComicBook';
+    color: whitesmoke;
+    transition: 0.5s ease;
+    animation: start-button-animation 0.5s ease forwards 3.7s;
+    display: none;
+    opacity: 0;
+}
+
 .start-button{
+    text-align: center;
     border: 5px solid whitesmoke;
     color: whitesmoke;
     width: 15%;
@@ -300,8 +338,9 @@ header {
     font-family: 'Obelixpro';
     letter-spacing: 2px;
     transition: 0.5s ease;
-    animation: start-button-animation 0.8s ease forwards 3.7s;
+    animation: start-button-animation 1s ease forwards 3.7s, click-me-pls 3s ease-in-out infinite;
     opacity: 0;
+    user-select: none;
 }
 
 .start-button:hover{
@@ -320,6 +359,17 @@ header {
     }
 }
 
+@keyframes click-me-pls {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.05);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
 
 
 @media only screen and (max-width: 920px) {

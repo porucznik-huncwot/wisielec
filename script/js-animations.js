@@ -79,3 +79,26 @@ function step11() {
 function step12() {
     ropeLoop.classList.add("step-12");
 }
+
+function clearClasses(){
+    pipeGroup.style.opacity = "0";
+    armGroup.style.opacity = "0";
+    ropeGruop.style.opacity = "0";
+    pipeGroup.classList.remove("step-01");
+    armDown.classList.remove("step-02");
+    armUp.classList.remove("step-02");
+    armBracket.classList.remove("step-02");
+    ropeLoop.classList.remove("step-03");
+    ropeLine.classList.remove("step-03");
+    ropeKnotDown.classList.remove("step-03");
+    ropeKnotUp.classList.remove("step-03");
+    pipeGroup.classList.remove("step-04");
+    shadowGroup.classList.remove("step-05");
+    armDown.classList.remove("step-06");
+    armUp.classList.remove("step-07");
+    armBracket.classList.remove("step-08");
+    ropeLine.classList.remove("step-09");
+    ropeKnotUp.classList.remove("step-10");
+    ropeKnotDown.classList.remove("step-11");
+    ropeLoop.classList.remove("step-12");
+}
