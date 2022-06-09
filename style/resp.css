@@ -48,7 +48,60 @@
     }
 
     .start-button{
+        width: 30%;
+        height: 100px;
+        font-size: 2em;
+        line-height: 1.2em;
+    }
+
+    #title{
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 2000px) {
+    .svg-img{
+        width: 800px;
+        height: 800px;
+    }
+
+    .container {
+        font-size: 6em;
+    }
+
+    .clue-key-div{
+        width: 50%;
+    }
+
+    .clue{
+        height: 100px;
+        width: 100%;
         font-size: 3em;
+        letter-spacing: 20px;
+    }
+
+    .keyboard{
+        width: 100%;
+
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .card-face{
+        font-size: 5em;
+    }
+
+    #win-title{
+        font-size: 12em;
+    }
+
+    #defeat-title {
+        font-size: 5em;
+    }
+
+    .start-button{
+        font-size: 5em;
+        height: 120px;
         line-height: 1.2em;
     }
 }

@@ -221,6 +221,7 @@ body {
 }
 
 #title {
+    width: 60%;
     animation: title-fill 1s ease forwards 3.7s;
 }
 
@@ -327,7 +328,7 @@ body {
     color: whitesmoke;
     width: 15%;
     min-width: 200px;
-    height: 80px;
+    height: 100px;
     margin-top: 50px;
     display: flex;
     align-items: center;

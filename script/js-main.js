@@ -152,8 +152,8 @@ function winnig(){
     startButton.textContent = "JESZCZE RAZ";
     winTitle.textContent = "WYGRANA!";
     startButton.style.pointerEvents = "all";
-    startButton.style.width = "30%";
-    startButton.style.height = "120px";
+    // startButton.style.width = "30%";
+    // startButton.style.height = "120px";
     startButton
     titleDiv.style.display = "flex";
     winTitle.style.display = "flex";
@@ -179,8 +179,8 @@ function losing(){
     startButton.textContent = "JESZCZE RAZ";
     winTitle.textContent = "PRZEGRANA!";
     startButton.style.pointerEvents = "all";
-    startButton.style.width = "30%";
-    startButton.style.height = "120px";
+    // startButton.style.width = "30%";
+    // startButton.style.height = "120px";
     titleDiv.style.display = "flex";
     winTitle.style.display = "flex";
     defeatTitle.style.display = "flex";
