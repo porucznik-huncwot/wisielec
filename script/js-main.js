@@ -2,6 +2,7 @@ const clues = ["MONTE CASSINO", "SUKULENT", "IMIESŁÓW", "ŚWIETLÓWKA", "CHŁO
 const clueDiv = document.getElementById("clue-div");
 const keyBoardDiv = document.getElementById("keyboard-div");
 const svgImage = document.getElementById("svg-img");
+const batteryLifes = document.getElementById("battery-lifes").children;
 const alphabeth = ["A", "Ą", "B", "C", "Ć", "D", "E", "Ę", "F", "G", "H", "I", "J", "K", "L", "Ł", "M", "N", "Ń", "O", "Ó", "P", "R", "S", "Ś", "T", "U", "W", "Y", "Z", "Ź", "Ż"];
 let clue = randomClue();
 let clueCoded = "";
@@ -45,7 +46,14 @@ function checkClue(letterIndex) {
     }
     else {
         mistakes += 1;
-        console.log("miatakes = " + mistakes);
+        // console.log("miatakes = " + mistakes);
+        batteryLifes[11-mistakes].style.opacity = "0";
+
+        const elementID = "letter-" + letterIndex;
+        const element2ID = "letter-back-" + letterIndex;
+        document.getElementById(element2ID).style.backgroundColor = "#f6b4b4";
+        document.getElementById(elementID).style.pointerEvents = "none";
+        document.getElementById(elementID).classList.add("clicked-incorrect");
 
         if(mistakes == 11){
             step12();
@@ -93,13 +101,6 @@ function checkClue(letterIndex) {
         else if(mistakes == 10){
             step11();
         }
-
-
-        const elementID = "letter-" + letterIndex;
-        const element2ID = "letter-back-" + letterIndex;
-        document.getElementById(element2ID).style.backgroundColor = "#f6b4b4";
-        document.getElementById(elementID).style.pointerEvents = "none";
-        document.getElementById(elementID).classList.add("clicked-incorrect");
     }
 }
 
