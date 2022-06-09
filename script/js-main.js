@@ -1,4 +1,4 @@
-const clues = ["MONTE CASSINO", "SUKULENT", "IMIESŁÓW", "ŚWIETLÓWKA", "CHŁODNICA", "KABRIOLET", "ARNIKA GÓRSKA", "SPÓŁGŁOSKA", "KOSODRZEWINA", "CHRZĄSZCZ", "INTERPUNKCJA", "JEDNOMASZTOWIEC", "MOTOCYKL"];
+const clues = ["MONTE CASSINO", "SUKULENT", "MONOCHROMATYCZNY", "ELEKTOMAGNES", "KLUCZ IMBUSOWY", "PACYFIKACJA", "IMIESŁÓW", "ŚWIETLÓWKA", "CHŁODNICA", "KABRIOLET", "ARNIKA GÓRSKA", "SPÓŁGŁOSKA", "KOSODRZEWINA", "CHRZĄSZCZ", "INTERPUNKCJA", "JEDNOMASZTOWIEC", "MOTOCYKL"];
 const clueDiv = document.getElementById("clue-div");
 const keyBoardDiv = document.getElementById("keyboard-div");
 const svgImage = document.getElementById("svg-img");
@@ -9,7 +9,8 @@ let clueCoded = "";
 let mistakes = 0;
 
 function randomClue() {
-    return clues[Math.floor(Math.random() * clues.length)];
+    let numer = Math.floor(Math.random() * clues.length)
+    return clues[numer];
 }
 
 function keyboardGenerator() {

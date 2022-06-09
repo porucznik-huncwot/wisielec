@@ -57,6 +57,16 @@
     #title{
         width: 80%;
     }
+
+    #battery{
+        position: fixed;
+        z-index: 2;
+        top: 28px;
+        right: 5;
+        height: 25px;
+        width: 84px;
+    }
+    
 }
 
 @media only screen and (min-width: 2000px) {
@@ -67,6 +77,7 @@
 
     .container {
         font-size: 6em;
+        height: 100px;
     }
 
     .clue-key-div{
@@ -103,5 +114,14 @@
         font-size: 5em;
         height: 120px;
         line-height: 1.2em;
+    }
+
+    #battery{
+        position: fixed;
+        z-index: 2;
+        top: 15;
+        right: 20;
+        height: 60px;
+        width: 210px;
     }
 }
