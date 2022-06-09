@@ -39,4 +39,16 @@
         font-size: 2.4em;
     }
 
+    #win-title{
+        font-size: 4em;
+    }
+
+    #defeat-title {
+        font-size: 2.4em;
+    }
+
+    .start-button{
+        font-size: 3em;
+        line-height: 1.2em;
+    }
 }
