@@ -4,12 +4,37 @@ const keyBoardDiv = document.getElementById("keyboard-div");
 const svgImage = document.getElementById("svg-img");
 const batteryLifes = document.getElementById("battery-lifes").children;
 const alphabeth = ["A", "Ą", "B", "C", "Ć", "D", "E", "Ę", "F", "G", "H", "I", "J", "K", "L", "Ł", "M", "N", "Ń", "O", "Ó", "P", "R", "S", "Ś", "T", "U", "W", "Y", "Z", "Ź", "Ż"];
-let clue = randomClue();
 let clueCoded = "";
 let mistakes = 0;
+let prevClues = [];
+
+let clue = "";
+
 
 function randomClue() {
-    let numer = Math.floor(Math.random() * clues.length)
+    let numer = Math.floor(Math.random() * clues.length);
+    return clues[numer];
+}
+
+function randomClue() {
+
+    if(prevClues.length == clues.length){
+        prevClues = new Array();
+    }
+
+    let isPrev = false;
+    let numer = 0;
+    do{
+        isPrev = false;
+        numer = Math.floor(Math.random() * clues.length);
+        for(let i=0; i<prevClues.length; i++){
+            if(numer == prevClues[i]){
+                isPrev = true;
+            }
+        }
+    }while(isPrev);
+
+    prevClues.push(numer);
     return clues[numer];
 }
 
@@ -111,6 +136,7 @@ function startGame() {
     clearClasses();
 
     clue = randomClue();
+
     clueCoded = "";
     mistakes = 0;
     const titleDiv = document.getElementById("title-div");
@@ -149,14 +175,14 @@ function winnig(){
     defeatTitle.innerHTML = "HASŁO TO: " + "<b>" + clue + "</b>";
 
     document.getElementById("title").style.display = "none";
-    startButton.style.animationDelay = "1.8s"
-    winTitle.style.animationDelay = "1.2s"
+    startButton.style.animationDelay = "1.8s";
+    winTitle.style.animationDelay = "1.2s";
+    defeatTitle.style.animationDelay = "1.2s";
     startButton.textContent = "JESZCZE RAZ";
     winTitle.textContent = "WYGRANA!";
     startButton.style.pointerEvents = "all";
     // startButton.style.width = "30%";
     // startButton.style.height = "120px";
-    startButton
     titleDiv.style.display = "flex";
     winTitle.style.display = "flex";
     defeatTitle.style.display = "flex";
@@ -164,6 +190,11 @@ function winnig(){
     setTimeout(() => {
         titleDiv.style.opacity = "1";
     }, 500);
+
+    for(let i=0; i<batteryLifes.length; i++){
+        batteryLifes[i].style.opacity = "1"
+    }
+
 }
 
 function losing(){
@@ -190,6 +221,10 @@ function losing(){
     setTimeout(() => {
         titleDiv.style.opacity = "1";
     }, 500);
+
+    for(let i=0; i<batteryLifes.length; i++){
+        batteryLifes[i].style.opacity = "1"
+    }
 }
 
 setTimeout(fixTitle, 3700);
